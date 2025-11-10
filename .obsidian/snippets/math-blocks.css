@@ -1,0 +1,95 @@
+/* ===============================
+   Custom Callouts for Math & Physics Notes
+   Author: ChatGPT (GPT-5)
+   Description:
+   Stylish academic-style callouts for Obsidian,
+   suitable for math/physics definitions, theorems,
+   postulates, principles, etc.
+   =============================== */
+
+/* === Base styling for all custom blocks === */
+.callout {
+  margin: 1em 0;
+  padding: 0.9em 1.2em;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+/* Shared header styling */
+.callout-title {
+  font-weight: 600;
+}
+
+/* -------------------------------------------
+   Definition block
+   ------------------------------------------- */
+.callout[data-callout="definition"] {
+  --callout-color: 210, 70%, 45%; /* cool blue */
+  --callout-icon: lucide-book-open;
+  border-left: 4px solid hsl(var(--callout-color));
+  background-color: hsl(var(--callout-color), 0.08);
+}
+.callout[data-callout="definition"] .callout-title {
+  color: hsl(var(--callout-color));
+}
+
+/* -------------------------------------------
+   Theorem block
+   ------------------------------------------- */
+.callout[data-callout="theorem"] {
+  --callout-color: 270, 60%, 50%; /* violet */
+  --callout-icon: lucide-layers;
+  border-left: 4px solid hsl(var(--callout-color));
+  background-color: hsl(var(--callout-color), 0.09);
+}
+.callout[data-callout="theorem"] .callout-title {
+  color: hsl(var(--callout-color));
+  font-weight: 700;
+}
+
+/* -------------------------------------------
+   Proposition block
+   ------------------------------------------- */
+.callout[data-callout="proposition"] {
+  --callout-color: 160, 50%, 40%; /* greenish blue */
+  --callout-icon: lucide-cube;
+  border-left: 4px solid hsl(var(--callout-color));
+  background-color: hsl(var(--callout-color), 0.08);
+}
+.callout[data-callout="proposition"] .callout-title {
+  color: hsl(var(--callout-color));
+}
+
+/* -------------------------------------------
+   Postulate block
+   ------------------------------------------- */
+.callout[data-callout="postulate"] {
+  --callout-color: 45, 85%, 50%; /* golden yellow */
+  --callout-icon: lucide-target;
+  border-left: 4px solid hsl(var(--callout-color));
+  background-color: hsl(var(--callout-color), 0.08);
+}
+.callout[data-callout="postulate"] .callout-title {
+  color: hsl(var(--callout-color));
+  font-weight: 600;
+}
+
+/* -------------------------------------------
+   Principle block
+   ------------------------------------------- */
+.callout[data-callout="principle"] {
+  --callout-color: 25, 90%, 55%; /* warm orange */
+  --callout-icon: lucide-zap;
+  border-left: 4px solid hsl(var(--callout-color));
+  background-color: hsl(var(--callout-color), 0.07);
+  font-style: italic;
+}
+.callout[data-callout="principle"] .callout-title {
+  color: hsl(var(--callout-color));
+  font-weight: 600;
+  font-style: normal;
+}
+
+
